@@ -1,6 +1,6 @@
 # Comentário
 """ Meu primeiro app """
-# -*- coding: utf-8  -*-
+# -- coding: utf-8  --
 """
 
 
@@ -34,17 +34,25 @@ print("false " + str(b))
 x = 1
 y = 2
 
-if x > y:
-    print(" x e maior")
+condicionais
+x = 5
+y = 5
+
+if x == y:
+    print("são iguais")
+elif x > y:
+    print("x é maior que y")
+elif x < y:
+    print("y é maior que x")
 else:
-    print("y e maior")
+    print("são diferentes")
+
+while
+
+x = 5
+while x <= 20:
+    print(x)
+    x += 1
 
 """
-
-x = 1
-y = 2
-
-if x > y:
-    print(" x e maior")
-else:
-    print("y e maior")
+lista = []
