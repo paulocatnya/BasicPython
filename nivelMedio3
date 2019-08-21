@@ -1,0 +1,18 @@
+"""
+MANIPULANDO ARQUIVOS
+LER ARQUIVO
+
+arquivo = open("opa.txt")
+linhas = arquivo.readlines()
+textoCompleto = arquivo.read()
+print(linhas)
+print("texto: "+ textoCompleto)
+for linha in linhas:
+    print(linha)
+======================================
+criar arquivo digitar fechar
+w = open("arquivo2.txt", "a")
+w.write("Funcionou de boa\n")
+w.close()
+"""
+
