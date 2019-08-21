@@ -1,0 +1,21 @@
+"""
+NIVEL MÉDIO DE PYTHON
+
+
+"""
+
+
+pares = [2,4,6,8,10]
+frutas = ["morango","melancia","goiaba","caju"]
+
+
+
+
+
+
+
+"""
+IMPRIMINDO
+"""
+print(pares)
+print(frutas)
