@@ -1,0 +1,10 @@
+import random
+
+"""random.seed(1)"""
+lista = [4,56,2]
+escolha = random.choice(lista)
+numero = random.randint(0,10)
+print(numero)
+print(escolha)
+
+
