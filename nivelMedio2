@@ -1,0 +1,17 @@
+"""
+DICIONARIO (OBJETO)
+"""
+
+aluno = {"Nome":"Paulo","Sobrenome":"Rodrigues", "Nascimento":"07/10/1995"}
+print(aluno)
+print(aluno["Nome"])
+
+for atributo in aluno:
+    print(atributo)
+
+
+for i in aluno:
+    print(i+": "+aluno[i])
+
+for i in aluno.items():
+    print(i)
