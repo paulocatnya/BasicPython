@@ -1,21 +1,31 @@
-"""
+
 NIVEL MÉDIO DE PYTHON
 
+TRABALHANDO COM LISTAS
 
-"""
+pares = [18,2,4,6,8,10]
+pares.sort(reverse=True)
+pares.reverse()
 
 
-pares = [2,4,6,8,10]
+
 frutas = ["morango","melancia","goiaba","caju"]
 
+del pares[4:]
+
+pares.append(12)
 
 
-
-
-
-
-"""
-IMPRIMINDO
-"""
 print(pares)
 print(frutas)
+for item in pares:
+    print(item)
+
+print(pares[0])
+print(len(pares))
+if "goiaba" in frutas:
+    print("Tem goiaba!")
+
+
+
+
