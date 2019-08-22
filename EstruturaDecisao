@@ -1,0 +1,71 @@
+from math import *
+from statistics import *
+
+
+ex1: 
+num1 = float(input("Primeiro numero porfavor"))
+num2 = float(input("Segundo numero porfavor"))
+if(num1>num2):
+    print("O primeiro é maior")
+elif num1 == num2:
+    print("sao iguais")
+else:
+    print("O segundo e maior")
+
+ex2:
+num1 = float(input("Informe seu numero: "))
+if(num1>=0):
+    print("positivo")
+else:
+    print("negativo")
+
+ex3
+sexo = input("Qual seu sexo? ")
+if sexo[0] == "H" or sexo[0] == "h":
+    print("HOMEM")
+elif sexo[0] == "F" or sexo[0] == "f":
+    print("MULHER")
+else:
+    print("SEXO INVALIDO")
+
+ex4
+letra = input("Digite uma letra")
+if letra == "a" or letra == "e" or letra == "i" or letra == "o" or letra == "u":
+    print("vogal")
+elif (1,2,3,4,5,6,7,8,9,0):
+    print("numero")
+else:
+    print("consoante")
+
+ex5
+nota1 = float(input("Primeira nota porfavor: "))
+nota2 = float(input("Segunda nota porfavor: "))
+media = median([nota1,nota2])
+print("Media: "+str(media))
+if(media >= 7 and media < 10):
+    print("Aprovado")
+elif(media <= 7):
+    print("Reprovado")
+elif(media == 10):
+    print("Aprovado com distincao")
+elif(media>10):
+    print("Algo de errado nao esta certo")
+
+ex6
+a = float(input("Primeiro: "))
+b = float(input("Segundo: "))
+c = float(input("Terceiro: "))
+
+maximo = max(a,b,c)
+menor = min(a,b,c)
+
+print("Maior e: "+str(maximo));
+print("Menor e: "+str(menor));
+
+ex7
+p = float(input("Primeiro preco: "))
+p2 = float(input("Segundo preco: "))
+p3 = float(input("Terceiro preco: "))
+barato = min(p,p2,p3)
+print("Compre o de: "+str(barato) + "R$ muito mais barato!")
+
