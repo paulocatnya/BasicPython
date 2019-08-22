@@ -1,0 +1,145 @@
+from statistics import * 
+from math import *
+
+"""COMPARANDO"""
+nome = str(input("Digite seu nome: "))
+while len(nome) < 3:
+    nome = str(input("Nome precisa ser maior que 3: "))
+print(str("Ate mais "+nome))
+"""==============================
+FUNCAO SIMPLES"""
+a = 3
+b = 3
+def sum(x,y):
+    return (x+y)
+print(int(sum(a,b)))
+"""==============================
+MEDIA """
+
+nota1 = int(input("Primeira nota: "))
+nota2 = int(input("Segunda nota: "))
+nota3 = int(input("Terceira nota: "))
+nota4 = int(input("Quarta nota: "))
+
+media = median([nota1,nota2,nota3,nota4])
+
+print(media) 
+"""
+================================
+DE M PARA CM"""
+m = int(input("Quantos metros?"))
+c = m*100
+print(c)
+"""
+================================
+CALCULANDO AREA DO CIRCULO"""
+r = float(input("Digite o raio: "))
+a = pi*(r*r)
+print(a)
+"""
+================================
+CALCULANDO AREA DE QUADRADO"""
+l = float(input("Digite o lado do quadrado: "))
+area = l*l
+print("Area normal: ")
+print(area)
+print("Dobro da area: ")
+print(area*2)
+"""================================
+salario mes"""
+valor = float(input("Quanto voce ganha por hora?"))
+hora = float(input("Quantas horas no mes?"))
+mes = valor*hora
+print(mes)
+"""================================
+DE FAHRENEIT PARA CELCIUS"""
+fa = float(input("Quantos farenheit: "))
+celcius = ((fa-32) * 5 / 9)
+print(celcius)
+"""================================
+de  celcius para fahreneit"""
+c = float(input("Quantos celcius? "))
+fa = ((c/5)*9)+32
+print(fa)
+
+"""================================
+logica e potencia"""
+a = float(input("Primeiro numero: --> "))
+b = float(input("Segundo numero: --> "))
+
+produto = (a*2) + (b/2)
+somaTriplo = a*3 + b
+elevacao = b.__pow__(3)
+
+print(produto)
+print(somaTriplo)
+print(elevacao)
+
+"""================================
+altura ideal"""
+altura = float(input("Qual sua altura?"))
+ideal = (72.7*altura) - 58
+print(ideal)
+"""================================"""
+altura = float(input("Qual sua altura? "))
+sexo = str(input("Qual seu sexo? (m/f) "))
+
+if sexo == "f":
+    ideal = (72.7*altura) - 58
+    print("Homem sua altura ideal: " + str(ideal))
+elif sexo == "m":
+    ideal = (62.1*altura) - 44.7
+    print("Mulher, sua altura ideal: " + str(ideal))
+else:
+    print("indefinido")
+
+"""================================
+calculando peso do peixe elif"""
+
+peso = float(input("Eai tio joao, qual peso? "))
+maximo = 50
+diferenca = peso-maximo
+multa = diferenca * 4
+
+if peso == 50:
+    print("Ficou na risca dos " + str(peso) + "kg, Nao paga nada")
+    
+elif peso > 50:
+    print("Voce esta: " + str(diferenca) + " a mais do que deveria")
+    print("Vai pagar: " + str(multa) + " de multa")
+else:
+    print("Como e menor que 50 nao vai pagar nada brow!")
+
+"""================================
+salario mensal"""
+valHora = float(input("Quanto ganha por hora? "))
+horasMes = float(input("Quantas horas por mes? "))
+totalBruto = valHora*horasMes
+
+imposto = (totalBruto * 100) / 14
+inss = totalBruto*0.008
+sindicato = totalBruto*0.005
+liquido = totalBruto - imposto - inss - sindicato
+
+
+print("Bruto: "+ str(totalBruto) +"R$")
+print("IR: "+ str(imposto) +"R$")
+print("INSS: "+ str(inss) +"R$")
+print("Sindicato: "+ str(totalBruto) +"R$")
+print("Liquido: "+ str(liquido) +"R$")
+"""================================
+latas de tintas primeira hipotese"""
+tamanho = float(input("Quantos metros de parede? "))
+lata = 3.6
+grande = tamanho/lata
+preco = 25 * grande
+
+print("Serão: " + str(grande) + " latas pequenas no valor de " +str(preco) )
+"""================================
+USANDO APENAS LATAS PEQUENAS"""
+tamanho = float(input("Quantos metros de parede? "))
+lata = 3.6
+pequena = tamanho/lata
+preco = 25 * grande
+
+print("Serão: " + str(pequena) + " latas pequenas no valor de " +str(preco) )
