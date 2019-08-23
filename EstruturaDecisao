@@ -1,7 +1,8 @@
 from math import *
 from statistics import *
-
-
+from random import *
+import sys
+"""
 ex1: 
 num1 = float(input("Primeiro numero porfavor"))
 num2 = float(input("Segundo numero porfavor"))
@@ -37,7 +38,7 @@ elif (1,2,3,4,5,6,7,8,9,0):
 else:
     print("consoante")
 
-ex5
+ex5return False
 nota1 = float(input("Primeira nota porfavor: "))
 nota2 = float(input("Segunda nota porfavor: "))
 media = median([nota1,nota2])
@@ -49,7 +50,7 @@ elif(media <= 7):
 elif(media == 10):
     print("Aprovado com distincao")
 elif(media>10):
-    print("Algo de errado nao esta certo")
+    print("Algo de errado nao esta certo")return False
 
 ex6
 a = float(input("Primeiro: "))
@@ -62,10 +63,305 @@ menor = min(a,b,c)
 print("Maior e: "+str(maximo));
 print("Menor e: "+str(menor));
 
-ex7
+ex7 e ex8
 p = float(input("Primeiro preco: "))
 p2 = float(input("Segundo preco: "))
 p3 = float(input("Terceiro preco: "))
 barato = min(p,p2,p3)
 print("Compre o de: "+str(barato) + "R$ muito mais barato!")
 
+ex9
+
+a = float(input("Insira um numero: "))
+b = float(input("Insira um numero: "))
+c = float(input("Insira um numero: "))
+
+if(c>b):
+    aux = c
+    c = b
+    b = aux
+if(b>a):
+    aux=b
+    b=a
+    a =aux
+if(c>b):
+    aux = c
+    c = b
+    b = aux
+print(str(a)+" - "+str(b)+" - "+str(c))
+
+fazendo mais facil
+
+a = float(input("Insira um numero: "))
+b = float(input("Insira um numero: "))
+c = float(input("Insira um numero: "))
+lista = [a,b,c]
+print(lista.sort(reverse=True))
+
+
+ex10
+
+turno = input("Em que turno voce estuda?? ")
+if(turno[0] == "M" or turno[0] == "m"):
+    print("Bom dia")
+elif(turno[0] == "V" or turno[0] == "v"):
+    print("Vespertino")
+elif(turno[0] == "N" or turno[0] == "n"):
+    print("Noturno")
+else:
+    print("OPcao invalida")
+
+ex11
+salarioAtual = float(input("Insira seu salario atual "))
+print("Salario antigo: "+str(salarioAtual))
+if(salarioAtual<280):
+    print("Salario com reajuste: "+str(salarioAtual))
+elif salarioAtual>=280 and salarioAtual<=700:
+    print("Salario com reajuste: "+str(salarioAtual))
+elif salarioAtual > 700 and salarioAtual <= 1500:
+    salarioAtual += salarioAtual*0.10
+    print("Salario com reajuste: "+str(salarioAtual))
+elif salarioAtual >= 1500:
+    salarioAtual += salarioAtual*0.5
+    print("Salario com reajuste: "+str(salarioAtual))
+
+ex12
+hora = float(input("Quanto custa sua hora? "))
+horasMes = float(input("Quantas horas no mes? "))
+
+bruto = hora*horasMes
+
+if(bruto <=900):
+    print("Voce esta isento")
+elif(bruto>900 and bruto<=1500):
+    ir =bruto*0.05
+    sindicato = bruto*0.03
+    fgts = bruto*0.11
+    Inss = bruto*0.10
+    totalDescontos = Inss
+    liquido = bruto - totalDescontos 
+    print("Seu salario bruto e: "+str(bruto))
+    print("Imposto de renda: "+str(ir))
+    print("INSS: "+str(Inss))
+    print("FGTS: "+str(fgts))
+    print("Total Descontos: "+str(totalDescontos))
+    print("Para o sindicato sera: " + str(sindicato))
+    print("liquido sera: " + str(liquido) + " IR voce esta ISENTO ")
+elif(bruto>1500 and bruto<=2500):
+    ir =bruto*0.05
+    sindicato = bruto*0.03
+    fgts = bruto*0.11
+    Inss = bruto*0.10
+    totalDescontos = ir+Inss
+    liquido = bruto - totalDescontos 
+    print("Seu salario bruto e: "+str(bruto))
+    print("Imposto de renda: "+str(ir))
+    print("INSS: "+str(Inss))
+    print("FGTS: "+str(fgts))
+    print("Total Descontos: "+str(totalDescontos))
+    print("Para o sindicato sera: " + str(sindicato))
+    print("liquido sera: " + str(liquido))
+elif(bruto>1500 and bruto<=2500):
+    ir =bruto*0.05
+    sindicato = bruto*0.03
+    fgts = bruto*0.11
+    Inss = bruto*0.10
+    totalDescontos = ir+Inss
+    liquido = bruto - totalDescontos 
+    print("Seu salario bruto e: "+str(bruto))
+    print("Imposto de renda: "+str(ir))
+    print("INSS: "+str(Inss))
+    print("FGTS: "+str(fgts))
+    print("Total Descontos: "+str(totalDescontos))
+    print("Para o sindicato sera: " + str(sindicato))
+    print("liquido sera: " + str(liquido))
+
+ex13
+dia = int(input("Digite o dia correspondente da semana: "))
+if(dia == 1):
+    print("Domingo")
+elif(dia == 2):
+    print("Segunda")
+elif(dia == 3):
+    print("Terca")
+elif(dia == 4):
+    print("Quarta")
+elif(dia == 5):
+    print("Quinta")
+elif(dia == 6):
+    print("Sexta")
+elif(dia == 7):
+    print("Sabado")
+else:
+    print("Digite um valor valido")
+
+ex14
+n1 = float(input("Primeira nota: "))
+n2 = float(input("Segunda nota: "))
+media = median([n1,n2])
+
+if(media >= 9 and media <= 10):
+    print("Media: " + str(media) + " - Conceito A - APROVADO")
+elif(media >=7.5 and media < 9):
+    print("Media: " + str(media) + " - Conceito B - APROVADO")
+elif(media >=6 and media <= 7.5):
+    print("Media: " + str(media) + " - Conceito C - APROVADO")
+elif(media >=4 and media <= 6):p = float(input("Primeiro lado: "))
+s = float(input("Segundo lado: "))
+t = float(input("Terceiro lado: "))
+
+if(p+s>t):
+    if(p == s and p == t):
+        print("EQUILATERO")
+    elif(p == s or s == t or p==3):
+        print("ISÓSCELES")
+    elif(p!=s and t or s != p and t or p != t):
+        print("Escaleno")
+else:
+    print("NAO PODE SER UM TRIANGULO")
+    print("Media: " + str(media) + " - Conceito D - REPROVADO")
+elif(media <=0 and media <= 4):
+    print("Media: " + str(media) + " - Conceito E - REPROVADO")
+
+ex15
+p = float(input("Primeiro lado: "))
+s = float(input("Segundo lado: "))
+t = float(input("Terceiro lado: "))
+
+if(p+s>t):
+    if(p == s and p == t):
+        print("EQUILATERO")
+    elif(p == s or s == t or p==3):
+        print("ISÓSCELES")
+    elif(p!=s and t or s != p and t or p != t):
+        print("Escaleno")
+else:
+    print("NAO PODE SER UM TRIANGULO")
+
+ex16
+a = float(input("Informe A: "))
+if(a==0):
+    print("Equaçao nao e do segundo grau!")
+else:
+    b = float(input("Informe B: "))
+    c = float(input("Informe C: "))
+    delta = pow(b,2) - (4*a) *c
+    if delta<0:
+        print("Nao tem raiz real")
+    elif delta == 0:
+        print("Tem apenas 1")
+    x=(pow(b,2))-(4*a*c)
+    try:
+        x= sqrt(x)
+    except ValueError as identifier:
+        print("Nao da para tirar a raiz de"+str(x))
+    
+    x1=(-b+x)/(2*a)
+    x2=(-b-x)/(2*a)
+   
+    print("DELTA: "+str(delta))
+    print("X1: "+str(x1))
+    print("X2: "+str(x2))
+ex17
+
+ano = int(input("Digite um ano: "))
+if ano % 4 == 0 and ano % 100 != 0:
+    print("E bissexto")
+else:
+    print("Nao e bissexto")
+
+ex18
+
+dia = int( input('Dia: ') )
+if dia>31:
+    print('Data Inválida')
+    sys.exit()
+    
+mes = int( input('Mês: ') )
+if mes>12:
+    print('Data Inválida')
+    sys.exit()
+ano = int( input('Ano: ') )
+
+valida = False
+
+if( mes==1 or mes==3 or mes==5 or mes==7 or \
+        mes==8 or mes==10 or mes==12):
+        if(dia<=31):
+            valida = True
+
+
+        elif( mes==4 or mes==6 or mes==9 or mes==11):
+            if(dia<=30):
+                valida = True
+        elif mes==2:
+            if (ano%4==0 and ano%400!=0) or (ano%400==0):
+                if(dia<=29):
+                    valida = True
+                elif(dia<=28):
+                    valida = True
+
+        if(valida):
+            print('Data válida')
+else:
+    print('Inválida')
+
+ex19
+num = int(input("Digite um numero menor que 1000: "))
+if(num>=99 and num<=999):
+    print("Sao: "+str(num/100)[0] + " centenas")
+    print("Sao: "+str(num/10)[1] + " dezenas")
+    print("Sao: "+str(num)[2]+" unidades")
+elif(num>=10 and num<=99):
+        print("Sao: "+str(num/10)[0] + " dezenas")
+        print("Sao: "+str(num)[1]+" unidades")
+elif(num >= 0 and num <= 9):
+        print("Sao: "+str(num)[0]+" unidades")
+
+ex20 ja fiz das notas do aluno
+ex21 falta
+
+ex22
+num = float(input("Qual numero? "))
+if num%2 == 0:
+    print("Par")
+else:
+    print("Impar")
+
+
+num = float(input("Entre com um numero: "))
+if num == round(num):
+    print("INTEIRO")
+else:
+    print("DECIMAL")
+    print("Arredondado pra cima: "+str(round(num+0.5)))
+    print("Arredondado pra baixo: "+str(round(num-0.5)))
+
+"""
+result = 0
+def som(num1,num2):
+    print("Resultado: "+str(num1+num2))
+def sub(num1,num2):
+    print("Resultado: "+str(num1-num2))
+def mul(num1,num2):
+   print("Resultado: "+str(num1*num2))
+def div(num1,num2):
+    print("Resultado: "+str(num1/num2))
+
+x = float(input("Insira o primeiro numero: "))
+opc = input("Somar(+) / Subtrair(-) / Multiplicar(*) / Dividir(/)")
+if opc != "-" or opc != "+" or opc != "*" or opc != "/":
+    print("Operacao invalida")
+y = float(input("Insira o segundo numero: "))
+if(opc == "+"):
+    som(x,y)
+elif(opc =="-"):
+    sub(x,y)
+elif(opc =="*"):
+    mul(x,y)
+elif(opc =="/"):
+    div(x,y)
+else:
+    print("Informe opcao valida")
+
+if()
