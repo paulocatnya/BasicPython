@@ -2,7 +2,7 @@ from math import *
 from statistics import *
 from random import *
 import sys
-"""
+
 ex1: 
 num1 = float(input("Primeiro numero porfavor"))
 num2 = float(input("Segundo numero porfavor"))
@@ -337,31 +337,67 @@ else:
     print("Arredondado pra cima: "+str(round(num+0.5)))
     print("Arredondado pra baixo: "+str(round(num-0.5)))
 
-"""
-result = 0
+ex24
+
+
 def som(num1,num2):
-    print("Resultado: "+str(num1+num2))
+    return  num1+num2
 def sub(num1,num2):
-    print("Resultado: "+str(num1-num2))
+    return  num1-num2
 def mul(num1,num2):
-   print("Resultado: "+str(num1*num2))
+    return  num1*num2
 def div(num1,num2):
-    print("Resultado: "+str(num1/num2))
+    return  num1/num2
 
 x = float(input("Insira o primeiro numero: "))
-opc = input("Somar(+) / Subtrair(-) / Multiplicar(*) / Dividir(/)")
-if opc != "-" or opc != "+" or opc != "*" or opc != "/":
-    print("Operacao invalida")
 y = float(input("Insira o segundo numero: "))
-if(opc == "+"):
-    som(x,y)
-elif(opc =="-"):
-    sub(x,y)
-elif(opc =="*"):
-    mul(x,y)
-elif(opc =="/"):
-    div(x,y)
-else:
-    print("Informe opcao valida")
+opc = input("Somar(+) / Subtrair(-) / Multiplicar(*) / Dividir(/)")
 
-if()
+if(opc == "+"):
+   result =som(x,y)
+elif(opc == "-"):
+   result =sub(x,y)
+elif(opc == "*"):
+   result =mul(x,y)
+elif(opc == "/"):
+   result =div(x,y)
+
+else:
+    print("Nenhuma opc valida")
+
+print("Resultado: "+str(round(result)))
+if(result%2==0):
+    print("Numero PAR")
+elif result%2!=0:
+    print("Numero IMPAR")
+if(result>=0):
+    print("Numero POSITIVO")
+elif result<0:
+    print("Numero NEGATIVO")
+if(result == round(result)):
+    print("Numero Inteiro")
+elif result!=round(result):
+    print("Numero DECIMAL")
+
+ex25
+
+perguntas = [ 
+    "Telefonou para a vítima? " ,
+    "Esteve no local do crime ?" ,
+    "Mora perto da vítima? " ,
+    "Devia para a vítima? " ,
+    "Já trabalhou com a vítima? " 
+]
+resposta = 0
+for qual in perguntas:
+  resposta += (input(qual) == "S")
+  
+if resposta == 5:
+  print("Assassino")
+elif resposta >=3:
+  print("Cúmplice")
+elif resposta ==2:
+  print("Suspeito")
+else:
+  print("Inocente")
+
