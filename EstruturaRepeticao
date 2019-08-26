@@ -1,5 +1,4 @@
-
-#ex1
+from statistics import *
 nota = -1
 
 while nota < 0 or nota > 10:
@@ -19,3 +18,117 @@ while nome == senha:
     senha = input("Qual senha? ")
 
 print("BEM VINDO")
+
+#ex3
+
+nome = input("Nome: ")
+while len(nome) < 3:
+    print("Precisa ter mais de 3 caracteres")
+    nome = input("Nome: ")
+
+idade = int(input("Idade: "))
+while idade < 0 or idade > 150:
+    print("Precisa ser entre 0 e 150")
+    idade = int(input("Idade: "))
+
+salario = float(input("Salario: "))
+while salario < 0:
+    print("Precisa ser maior que 150")
+    salario = float(input("Salario: "))
+
+sexo = input("Sexo: ")
+while sexo not in ("F","f","M","m"):
+    sexo = input("Opções: F f M m ")
+
+
+estadoCivil = input("Estado Civil: ")
+while estadoCivil not in ("s","S","c","C"):
+    sexo = input("Opções: S s C c ")
+
+
+#ex 4 e 5
+a = int(input("Populacao pais A: "))
+porcentagemA = float(input("Porcentagem pais A: "))
+b = int(input("Populacao pais B: "))
+porcentagemB = float(input("Porcentagem pais B: "))
+anos = 0
+
+while a <= b:
+    
+    a = a + (a * porcentagemA)
+    b = b + (b * porcentagemB)
+    anos = anos + 1
+    
+print("Serao: " + str(anos) + str(" anos") + " o pais A tera: " + str(round(a))+" habitantes")
+
+#ex6
+for i in range(20):
+    print(i+1)
+
+
+for i in range(20):
+    print(i+1, end='\t')
+
+#ex7 ex8
+minhaLista = []
+for i in range(5):
+    i = float(input("Digite o "+str(i+1)+" numero: "))
+    minhaLista.append(i)
+maior = max(minhaLista)
+menor = min(minhaLista)
+soma =  sum(minhaLista)
+media = median(minhaLista)
+print("Maior: "+str(maior))
+print("Menor: "+str(menor))
+print("Soma: "+str(soma))
+print("Media: "+str(media))
+
+#ex9
+for i in range(50):
+    if(i%2!=0):
+        print(i)
+
+#ex10 ex11
+a = int(input("Digite o primeiro inteiro: "))
+b = int(input("Digite o segundo inteiro: "))
+total = 0
+for i in range(a,b):
+    total += i
+    print(i)
+print("Total Soma: " + str(total))
+
+ex12
+num = int(input("Tabuada de: "))
+for index in range(10):
+    print(str(num) + "X" + str(index) + "=" + str(num*index))
+
+ex13
+base = int(input("Insira a base: "))
+expoente = int(input("Insira o expoente: "))
+resultado = pow(base,expoente)
+print(str(resultado))
+
+ex14
+listaPares = []
+listaImpares = []
+for i in range(10):
+    a = int(input("Insira um numero"))
+    if(a%2==0):
+        listaPares.append(a)
+    else:
+        listaImpares.append(a)
+print("PARES: "+str(listaPares) + "IMPARES: "+str(listaImpares))
+
+#15,16
+n = int(input("Qual numero quer calcular? "))
+
+for i in range(n):
+    o=i+i
+    print(i,o)
+
+#ex17
+x = int(input("Numero para fatorar"))
+total = 1
+for n in range(x):
+    total = total * (n + 1)
+print(total)
