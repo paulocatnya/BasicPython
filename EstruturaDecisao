@@ -1,9 +1,10 @@
+
 from math import *
 from statistics import *
 from random import *
 import sys
 
-ex1: 
+#ex1: 
 num1 = float(input("Primeiro numero porfavor"))
 num2 = float(input("Segundo numero porfavor"))
 if(num1>num2):
@@ -13,14 +14,14 @@ elif num1 == num2:
 else:
     print("O segundo e maior")
 
-ex2:
+#ex2:
 num1 = float(input("Informe seu numero: "))
 if(num1>=0):
     print("positivo")
 else:
     print("negativo")
 
-ex3
+#ex3
 sexo = input("Qual seu sexo? ")
 if sexo[0] == "H" or sexo[0] == "h":
     print("HOMEM")
@@ -29,7 +30,7 @@ elif sexo[0] == "F" or sexo[0] == "f":
 else:
     print("SEXO INVALIDO")
 
-ex4
+#ex4
 letra = input("Digite uma letra")
 if letra == "a" or letra == "e" or letra == "i" or letra == "o" or letra == "u":
     print("vogal")
@@ -38,7 +39,7 @@ elif (1,2,3,4,5,6,7,8,9,0):
 else:
     print("consoante")
 
-ex5return False
+#ex5return False
 nota1 = float(input("Primeira nota porfavor: "))
 nota2 = float(input("Segunda nota porfavor: "))
 media = median([nota1,nota2])
@@ -52,7 +53,7 @@ elif(media == 10):
 elif(media>10):
     print("Algo de errado nao esta certo")return False
 
-ex6
+#ex6
 a = float(input("Primeiro: "))
 b = float(input("Segundo: "))
 c = float(input("Terceiro: "))
@@ -63,14 +64,14 @@ menor = min(a,b,c)
 print("Maior e: "+str(maximo));
 print("Menor e: "+str(menor));
 
-ex7 e ex8
+#ex7 e ex8
 p = float(input("Primeiro preco: "))
 p2 = float(input("Segundo preco: "))
 p3 = float(input("Terceiro preco: "))
 barato = min(p,p2,p3)
 print("Compre o de: "+str(barato) + "R$ muito mais barato!")
 
-ex9
+#ex9
 
 a = float(input("Insira um numero: "))
 b = float(input("Insira um numero: "))
@@ -90,7 +91,7 @@ if(c>b):
     b = aux
 print(str(a)+" - "+str(b)+" - "+str(c))
 
-fazendo mais facil
+#fazendo mais facil
 
 a = float(input("Insira um numero: "))
 b = float(input("Insira um numero: "))
@@ -99,7 +100,7 @@ lista = [a,b,c]
 print(lista.sort(reverse=True))
 
 
-ex10
+#ex10
 
 turno = input("Em que turno voce estuda?? ")
 if(turno[0] == "M" or turno[0] == "m"):
@@ -111,7 +112,7 @@ elif(turno[0] == "N" or turno[0] == "n"):
 else:
     print("OPcao invalida")
 
-ex11
+#ex11
 salarioAtual = float(input("Insira seu salario atual "))
 print("Salario antigo: "+str(salarioAtual))
 if(salarioAtual<280):
@@ -125,7 +126,7 @@ elif salarioAtual >= 1500:
     salarioAtual += salarioAtual*0.5
     print("Salario com reajuste: "+str(salarioAtual))
 
-ex12
+#ex12
 hora = float(input("Quanto custa sua hora? "))
 horasMes = float(input("Quantas horas no mes? "))
 
@@ -176,7 +177,7 @@ elif(bruto>1500 and bruto<=2500):
     print("Para o sindicato sera: " + str(sindicato))
     print("liquido sera: " + str(liquido))
 
-ex13
+#ex13
 dia = int(input("Digite o dia correspondente da semana: "))
 if(dia == 1):
     print("Domingo")
@@ -195,7 +196,7 @@ elif(dia == 7):
 else:
     print("Digite um valor valido")
 
-ex14
+#ex14
 n1 = float(input("Primeira nota: "))
 n2 = float(input("Segunda nota: "))
 media = median([n1,n2])
@@ -223,7 +224,7 @@ else:
 elif(media <=0 and media <= 4):
     print("Media: " + str(media) + " - Conceito E - REPROVADO")
 
-ex15
+#ex15
 p = float(input("Primeiro lado: "))
 s = float(input("Segundo lado: "))
 t = float(input("Terceiro lado: "))
@@ -238,7 +239,7 @@ if(p+s>t):
 else:
     print("NAO PODE SER UM TRIANGULO")
 
-ex16
+#ex16
 a = float(input("Informe A: "))
 if(a==0):
     print("Equaçao nao e do segundo grau!")
@@ -262,7 +263,7 @@ else:
     print("DELTA: "+str(delta))
     print("X1: "+str(x1))
     print("X2: "+str(x2))
-ex17
+#ex17
 
 ano = int(input("Digite um ano: "))
 if ano % 4 == 0 and ano % 100 != 0:
@@ -270,7 +271,7 @@ if ano % 4 == 0 and ano % 100 != 0:
 else:
     print("Nao e bissexto")
 
-ex18
+#ex18
 
 dia = int( input('Dia: ') )
 if dia>31:
@@ -306,7 +307,7 @@ if( mes==1 or mes==3 or mes==5 or mes==7 or \
 else:
     print('Inválida')
 
-ex19
+#ex19
 num = int(input("Digite um numero menor que 1000: "))
 if(num>=99 and num<=999):
     print("Sao: "+str(num/100)[0] + " centenas")
@@ -318,10 +319,10 @@ elif(num>=10 and num<=99):
 elif(num >= 0 and num <= 9):
         print("Sao: "+str(num)[0]+" unidades")
 
-ex20 ja fiz das notas do aluno
-ex21 falta
+#ex20 ja fiz das notas do aluno
+#ex21 falta
 
-ex22
+#ex22
 num = float(input("Qual numero? "))
 if num%2 == 0:
     print("Par")
@@ -337,7 +338,7 @@ else:
     print("Arredondado pra cima: "+str(round(num+0.5)))
     print("Arredondado pra baixo: "+str(round(num-0.5)))
 
-ex24
+#ex24
 
 
 def som(num1,num2):
@@ -379,18 +380,17 @@ if(result == round(result)):
 elif result!=round(result):
     print("Numero DECIMAL")
 
-ex25
-
-perguntas = [ 
+#ex25 
+listaPerguntas = [ 
     "Telefonou para a vítima? " ,
-    "Esteve no local do crime ?" ,
+    "Esteve no local do crime? " ,
     "Mora perto da vítima? " ,
     "Devia para a vítima? " ,
     "Já trabalhou com a vítima? " 
 ]
 resposta = 0
-for qual in perguntas:
-  resposta += (input(qual) == "S")
+for item in listaPerguntas:
+  resposta += (input(item) == "S")
   
 if resposta == 5:
   print("Assassino")
@@ -400,4 +400,108 @@ elif resposta ==2:
   print("Suspeito")
 else:
   print("Inocente")
+
+#ex26
+
+resp = input("Qual combustivel ? (A/G)")
+litros = float(input("Quantos litros?"))
+if(resp == "A"):
+    print("ALCOOL")
+    if litros <= 20:
+        total = litros * 1.90
+        desconto = total * 0.03
+        totalFinal = total-desconto
+        print("Seu desconto sera de: " + str(desconto) + ", Total a ser pago: " + str(totalFinal))
+    elif litros > 20:
+        total = litros * 1.90
+        desconto = total * 0.05
+        totalFinal = total-desconto
+        print("Seu desconto sera de: " + str(desconto) + ", Total a ser pago: " + str(totalFinal))
+
+if(resp == "G"):
+    print("GASOLINA")
+    if litros <= 20:
+        total = litros * 2.50
+        desconto = total * 0.04
+        totalFinal = total-desconto
+        print("Seu desconto sera de: " + str(desconto) + ", Total a ser pago: " + str(totalFinal))
+    elif litros > 20:
+        total = litros * 2.50
+        desconto = total * 0.06
+        totalFinal = total-desconto
+        print("Seu desconto sera de: " + str(desconto) + ", Total a ser pago: " + str(totalFinal))
+
+#ex27
+
+kgMorangos = int(input("Quantos kg de morangos? "))
+kgMacas = int(input("Quantos kg de macas? "))
+
+totalGeral = 0
+if kgMorangos <= 5:
+    totalMorangos = kgMorangos * 2.5
+    totalGeral += totalMorangos
+    print("TOTAL MORANGOS: " + str(totalMorangos))
+elif kgMorangos > 5:
+    totalMorangos = kgMorangos * 2.2
+    totalGeral += totalMorangos  
+    print("TOTAL MORANGOS: " + str(totalMorangos))
+if kgMacas <= 5:
+    totalMacas = kgMacas * 1.8
+    totalGeral += totalMacas
+    print("TOTAL MAÇAS: " + str(totalMacas))
+elif kgMacas > 5:
+    totalMacas = kgMacas * 1.5
+    totalGeral += totalMacas
+    print("TOTAL MAÇAS: " + str(totalMacas))
+totalKilos = kgMorangos + kgMacas
+if totalGeral > 25 or totalKilos>8:
+    desconto = totalGeral * 0.10
+    print(str(totalKilos))
+    print("VAI GANHAR DESCONTO DE 10% TOTAL DE: " + str(desconto) + "PRECO FINAL: " + str(totalGeral-desconto))
+
+#ex28
+print("Olá, qual carne hoje?")
+carne = input("FILE DUPLO (F), ALCATRA (A), PICANHA (P) ")
+descontoFidelidade = 0
+vlTotal = 0
+
+if carne == "F":
+    print("FILE DUPLO")
+    kilos = float(input("Vai levar quantos KG hoje? "))
+    if kilos <= 5:
+        print("FILE DUPLO - 5.80 o kilo")
+        vlTotal = kilos*5.8
+    elif kilos > 5:
+        print("4.90 o kilo")
+        vlTotal = kilos*4.9
+elif carne == "A":
+    print("ALCATRA")
+    kilos = float(input("Vai levar quantos KG hoje? "))
+    if kilos <= 5:
+        print("6.80 o kilo")
+        vlTotal = kilos*6.8
+    elif kilos > 5:
+        print("5.90 o kilo")
+        vlTotal = kilos*5.9
+elif carne == "P":
+    print("PICANHA")
+    kilos = float(input("Vai levar quantos KG hoje? "))
+    if kilos <= 5:
+        vlTotal = kilos*7.8
+    elif kilos > 5:
+        vlTotal = kilos*6.9
+else:
+    print("OPCAO INVALIDA")
+
+cartao = input("Vai usar o TABAJARA CARD? SIM (S) NAO (N) ")
+if cartao == "S":
+    descontoFidelidade = 0.05 * vlTotal
+    print("Preco total: " + str(vlTotal))
+    print("Desconto: " + str(descontoFidelidade))
+    print("Preco total com desconto: " + str(vlTotal-descontoFidelidade))
+else:
+    descontoFidelidade = 0 * vlTotal
+    print("Preco total: " + str(vlTotal))
+    print("Desconto: " + str(descontoFidelidade))
+    print("Preco total com desconto: " + str(vlTotal-descontoFidelidade))
 
