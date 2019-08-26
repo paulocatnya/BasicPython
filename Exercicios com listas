@@ -1,0 +1,9 @@
+
+#ex1
+lista = []
+
+for i in range(5):
+    item = int(input("Digite um numero: "))
+    lista.append(item)
+
+print(lista)
