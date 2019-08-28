@@ -1,0 +1,13 @@
+Profissionais = {
+    "Ti":["Jr","Pl","Sr"],
+    "Salario": [100,300],
+    "Tipo": ["A",300,700]
+}
+print(Profissionais.keys())
+print(Profissionais.values())
+
+print("\n\nOS PROFISSIONAIS")
+for c in Profissionais.keys():
+    print(c)
+    for v in Profissionais.values():
+        print(":"+str(v))
