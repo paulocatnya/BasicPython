@@ -1,5 +1,4 @@
 
-#ex1
 lista = []
 
 for i in range(5):
@@ -7,3 +6,178 @@ for i in range(5):
     lista.append(item)
 
 print(lista)
+#ex2
+lista = []
+for i in range(5):
+    item = int(input("Digite um numero: "))
+    lista.sort(reverse=True)
+    lista.append(item)
+print(lista)
+#ex3
+lista = []
+for i in range(4):
+    notas = int(input("Numero: "))
+    lista.append(notas)
+media = median(lista)
+print("Notas: "+str(lista))
+print("Media: "+str(media))
+
+#ex4
+minhaLista = []
+consoantes = 0
+print ('Informe os caracters')
+for i in range(10):
+	minhaLista.append((input('Caracter  '+ str(i+1) + ':\n')))
+	char = minhaLista[i]
+	if(char not in ('a','e','i','o','u')):
+		consoantes += 1
+print(consoantes)
+#ex5
+listaGeral = []
+listaPar = []
+listaImpar = []
+for i in range(20):
+    num = float(input("Numero: "))
+    listaGeral.append(num)
+    if(num%2 == 0):
+        listaPar.append(num)
+    else:
+        listaImpar.append(num)
+print("Geral: "+str(listaGeral))
+print("Pares: "+str(listaPar))
+print("Impares: "+str(listaImpar))
+
+#ex6
+lista = []
+medias = []
+for aluno in range(10):
+    nota1 = float(input("\nPrimeira nota: "))
+    nota2 = float(input("Sgunda nota: "))
+    nota3= float(input("Terceira nota: "))
+    nota4 = float(input("Quarta nota: "))
+    media = median([nota1,nota2,nota3,nota4])
+    if media>7:
+        medias.append(media)
+print(str(len(medias)) + " Aprovado")
+
+#EX7
+lista = []
+for i in range(5):
+    lista.append(float(input("Numero: ")))
+media = median(lista)
+soma = sum(lista)
+print("GERAL: "+str(lista))
+
+print("MEDIA: "+str(media))
+
+print("SOMA: "+str(soma))
+#ex8
+idades = []
+alturas = []
+for i in range(2):
+    idade = int(input("Idade porfavor: "))
+    altura = float(input("Altura porfavor: "))
+    idades.append(idade)
+    alturas.append(altura)
+    idades.reverse()
+    alturas.reverse()
+
+print("Idades: " + str(idades))
+print("Alturas: " + str(alturas))
+#ex9
+lista = []
+listaP = []
+for i in range(3):
+    n = float(input("Numero: "))
+    lista.append(n)
+    nQ = pow(n,2)
+    listaP.append(nQ)
+
+print("GERAL: "+str(lista))
+print("AO QUADRADO: "+str(listaP))
+
+#ex10
+lista1 = []
+lista2 = []
+lista3 = []
+for i in range(3):
+    a = float(input("Lista 1 Numero: "))
+    lista1.append(a)
+    lista3.append(a)
+    b = float(input("Lista 2 Numero: "))
+    lista2.append(b)
+    lista3.append(b)
+
+print("LISTA 1: "+str(lista1))
+print("LISTA 2: "+str(lista2))
+print("LISTA 3: "+str(lista3))
+#ex11
+
+alunos = []
+idades = []
+alturas = []
+maioresDe13 = 0
+alturaBaixa = 0
+
+for i in range(3):
+    idade = int(input("Idade: "))
+    if idade > 13:
+        maioresDe13 +=1
+    altura = int(input("Altura: "))
+    idades.append(idade)
+    alturas.append(altura)
+
+mediaAltura = median(alturas)
+for alt in alturas:
+    if alt < mediaAltura:
+        alturaBaixa+=1
+
+print(alturas)
+print(idades)
+print("Maiores de 13: "+str(maioresDe13)+" alunos")
+print("Media de altura: "+str(mediaAltura))
+print("Abaixo da media: "+str(alturaBaixa))
+
+#ex13
+
+meses = ["Janeiro","Fevereiro","Marco","Abril","Maio",
+"Junho","Julho","Agosto","Setembro","Outubro",
+"Novembro","Dezembro"]
+totalTemp = 0
+temperaturas = [] 
+mesesAcima = {}
+for i in range(len(meses)):
+       temperaturas.append(float(input("Informe a temperatura media do mes de "+str(meses[i] + ": "))))
+       totalTemp += temperaturas[i]
+media = totalTemp/len(meses)
+for i in range(len(meses)):
+    if temperaturas[i] > media:
+        mesesAcima.update({meses[i]:temperaturas[i]})
+print("Total: : "+str(totalTemp))
+print("Media: "+str(media))
+print("Temperaturas: "+str(temperaturas))
+print("Meses acima de: "+str(media)+" - " +str(mesesAcima))
+
+#ex14
+
+perguntas = ["Telefonou para vitima? ","Esteve no local do crime?",
+            "Mora perto da vítima?","Devia para vitima?",
+            "Já trabalhou com a vítima?"]
+
+sim = 0
+respostas = []
+for i in perguntas:
+   respostas.append(input(i))
+
+for s in respostas:
+    if s == "s":
+        sim += 1
+
+if sim == 2:
+    print("2 - SUSPEITA")
+elif sim == 3 or sim == 4:
+    print("3 - CUMPLICE")
+elif sim == 5:
+    print("5 - CULPADO")
+else:
+    print("0 ou 1 - INOCENTE")
