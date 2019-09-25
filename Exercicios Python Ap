@@ -1,0 +1,268 @@
+
+#1 - 
+import re
+from statistics import *
+n1 =  float(input('Primeira nota: '))
+n2 =  float(input('Segunda nota: '))
+result = median([n1,n2])
+print('SUA MEDIA ' + str(result))
+if result>=7 and result<=9:
+    print('aprovado')
+elif result<7:
+    print('reprovado')
+elif result>=10:
+    print('aprovado com distincao')
+
+
+#2 - 
+
+nome = input('nome: ')
+while len(nome) < 3:
+    nome = input('nome precisa ser maior ou igual que 3: ')
+
+idade = int(input('idade: '))
+while not(idade > 0 and idade <= 150):
+    idade = int(input('idade entre 0 e 150: '))
+
+salario = float(input('salario: '))
+while not(salario>0):
+    salario = float(input('Salario precisa ser maior que 0: '))
+
+sexo = input('sexo: ')
+while not(sexo=='m' or sexo =='f'):
+    sexo = input('sexo (m/f): ')
+
+estadoCivil = input('estado civil: ')
+while estadoCivil not in ('s','c','v','d'):
+    estadoCivil = input('estado civil (s/c/v/d): ')
+
+print('Dados lidos com sucesso!')
+pessoa = {'nome':nome,'idade':idade,'salario':salario,'sexo':sexo,'estado civil':estadoCivil}
+print(pessoa)
+
+
+#3 - 
+
+pA = 80000
+cA = 0.03
+pB = 200000
+cB = 0.015
+
+ano = 0
+while pA <= pB:
+    pA += pA*cA
+    pB += pB*cB
+    ano=ano+1
+
+print('Levara %d anos'%ano)
+
+#4 - 
+#5 - 
+
+#from statistics import *
+
+op = 0
+lista = []
+while op != -1:
+    op = int(input('Valor: '))
+    if op == -1:
+        print('RESUMO: ')
+    else:
+        lista.append(op)
+
+print ('Todos elementos: ' + str(lista))
+print('inseridos: %d elementos'%len(lista))
+lista.reverse()
+print('Elementos invertidos: ' + str(lista))
+print('Soma dos elementos: ' + str(sum(lista)))
+
+mediaLista = median(lista);
+print('Media dos elementos: ' + str(mediaLista))
+
+listaMaioresMedia = []
+for i in lista:
+    if i > mediaLista:
+        listaMaioresMedia.append(i)
+
+print('Maiores que a media: ' + str(listaMaioresMedia))
+
+
+listaMenores7 = []
+for i in lista:
+    if i < 7:
+        listaMenores7.append(i)
+print('Menores que 7: ' + str(listaMenores7))
+
+print('ATÉ A PROXIMA!!!')
+
+#6 - 
+
+idades = []
+alturas = []
+alturasMaioresQueTreze   = []
+alunosQueAtendem = 0
+alturaTodos = []
+qtd = 0
+
+for i in range(5):
+    idade = int(input('Idade: '))    
+    altura = float(input('Altura: '))
+    alturas.append(altura)
+    if idade>13:
+        alturasMaioresQueTreze.append(altura)
+
+
+media = median(alturasMaioresQueTreze)
+
+for i in alturasMaioresQueTreze:
+    if i <= media:
+        alunosQueAtendem += 1
+
+print('A media de altura de alunos com mais de treze é: ' + str(media))
+print(str(len(alturasMaioresQueTreze)) + ' são maiores que 13')
+print(str(alunosQueAtendem) + ' atendem o criterio.')
+
+
+
+#7 - 
+
+def Mes(mes):
+    meses = ['','jan','fev','marc','abril','mai','jun','jul','agos','set','out','nov','dez']
+    return meses[mes]
+
+def Dia(dia):
+    dias = ['zero','um','dois','tres','quatro','cinco','seis','sete','oito','nove','dez','onze','doze','treze','quatorze','quinze','d16','d17','d18','d19','vinte','v1','v2','v3','v4','v5','v6','v7','v8','v9','trinta','t1']
+    return dias[dia]
+
+data = input('Qual data? (dd/MM/yyyy) ')
+
+#print('Extenso: ' + data[0:2] + ' de: '+ Mes(data[3:4]) + 'de: ' + data[5:] )
+#print('Extenso: ' + Dia(data[0:2]) )
+
+d = data[0:2]
+m = data[3:5]
+a = data[6:]
+
+Dia(int(d))
+
+print(Dia(int(d)) + ' de ' + Mes(int(m)) + ' de ' + a)
+
+
+#8 - 
+def Qtd(num):
+    newNum = str(num)
+    return len(newNum)
+numero = 89332
+a = Qtd(numero)
+print(a)
+
+#9 - 
+nome = input('qual seu nome? ')
+const = ''
+for i in nome:
+    const += i
+    print (const)
+
+#10 -  
+class Carro:
+    def __init__(self):
+        self.consumo = 20
+        self.reservatorio = 0
+
+    def obterReservatorio(self):
+        return self.reservatorio
+    
+    def addGasolina(self, qtd):
+        self.reservatorio += qtd
+    
+    def andar(self, km):
+        litros = km / self.consumo 
+        self.reservatorio -= litros
+
+        
+c1 = Carro()
+print('Consome: '+ str(c1.consumo) + ' por litro e tem: '+  str(c1.obterReservatorio()) + ' no tanque')
+print('Parando no posto e colocando 30 litro')
+c1.addGasolina(30)
+print('Consome: '+ str(c1.consumo) + ' por litro e tem: '+  str(c1.obterReservatorio()) + ' no tanque')
+print('Andando 20km')
+c1.andar(200)
+print('Consome: '+ str(c1.consumo) + ' por litro e tem: '+  str(c1.obterReservatorio()) + ' no tanque')
+print('Bora encher o tanque!')
+c1.addGasolina(80)
+print('Consome: '+ str(c1.consumo) + ' por litro e tem: '+  str(c1.obterReservatorio()) + ' no tanque')
+
+#11 - 
+import re
+
+
+def recebe(ss):
+    p = re.findall(r'\d\d+\D\D\D:\d\d\d\d',ss)
+    if p:
+        if ss == p[0] :
+            return 'boa'
+    else:
+        return 'formato invalido'
+
+s = '15JAN:1700'
+
+print (recebe(s))
+#12 - 
+
+# ----------- REGULAR EXPRESSION ----------------REGEX101.COM#
+import re
+string = '874***39assadsddfdsfsd0f9498438943--=-=-=-!@#$%*(/;disjdsi32838)'
+def limpa(ss):
+    s = re.findall(r'[0-9 a-z]',ss)
+    newString = ''
+    for i in s:
+        newString+=i
+    return newString
+print(limpa(string))
+
+
+#==================================================================================================
+
+#ESTUDO RE
+#import re
+print(r'oi\ngalera')
+strTeste = 'Era uma alguel vez alguem  que ja nao era da vez, gatos, gatas, gatinhos, gatoes gatilho gataaaap bacaaaa' 
+emails = 'po-po@rbr.com sa.pook@fe.com smdsn22@sok.com.br soaksaok sokaosk appa pp@hotmail.com.br pau.lo.rob@hotmaill.com'
+
+padrao = re.search(r'algue\w',strTeste)
+padrao1 = re.search(r'algue.',strTeste)
+padrao2 = re.search(r'\w\w',strTeste)
+padrao3 = re.findall(r'gat\w',strTeste)
+padrao4 = re.findall(r'gat\w+',strTeste)
+padrao5 = re.findall(r'gat\w*',strTeste)
+padrao6 = re.findall(r'[gat]+',strTeste)
+padrao7 = re.findall(r'\w{4,6}',strTeste)
+padrao8 = re.findall(r'a{3}',strTeste)
+padrao9 = re.findall(r'[\w.-]+@+\w+\.+\w+[.\w*.]+[\w]',emails)
+
+if padrao:
+    print(padrao.group())
+    print(padrao1.group())
+    print(padrao2.group())
+    print(padrao3)
+    print(padrao4)
+    print(padrao5)
+    print(padrao6)
+    print(padrao7)
+    print(padrao9)
+else:
+    print('nao achei')
+
+
+
+
+# ----------- REGULAR EXPRESSION ----------------REGEX101.COM#
+#import re
+string = '874***39assadsddfdsfsd0f9498438943--=-=-=-!@#$%*(/;disjdsi32838)'
+def limpa(ss):
+    s = re.findall(r'[0-9 a-z]',ss)
+    newString = ''
+    for i in s:
+        newString+=i
+    return newString
+print(limpa(string))
