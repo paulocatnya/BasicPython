@@ -1,17 +1,12 @@
 num = int(input('what number? '))
 txt = 'Calculando %s! = %s' %(num,num)
-resultado = 0
 fatorial = 0
-
 for i in range(num):
     if i==0:
         resultado = num
     elif i>0:
         txt += ' x %s'%(num-i)
         resultado = resultado*(num-i)
-        fatorial = resultado
 
-txt += ' = %s'%(fatorial)
+txt += ' = %s'%(resultado)
 print txt
-
-
